@@ -1,0 +1,22 @@
+.footer
+{
+    background-color: #FBD062 ;
+    height:80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding:60px 0;
+}
+.left-side h3 
+{
+    font-weight:600;
+}
+:focus{
+    outline:none;
+}
+.field
+{
+    margin-top:15px;
+    padding:15px;
+    border:none;
+}

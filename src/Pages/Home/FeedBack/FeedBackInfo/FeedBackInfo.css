@@ -1,0 +1,18 @@
+.clients-box
+{
+    padding:20px;
+    border:1px solid gray;
+    margin:20px;
+}
+.c-h-title{
+    margin-top:20px;
+    margin-left:30px;
+}
+.c-h-title h6 
+{
+    font-weight: 700;
+}
+.c-h-title p 
+{
+    font-weight: 600;
+}
