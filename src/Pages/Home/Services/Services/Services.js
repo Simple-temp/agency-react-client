@@ -1,29 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Services.css"
-import service1 from "../../../../img/icons/service1.png";
-import service2 from "../../../../img/icons/service2.png";
-import service3 from "../../../../img/icons/service3.png";
 import ServicesInfo from '../ServicesInfo/ServicesInfo';
 
 const Services = () => {
 
-    const services = [
-        {
-            name: "Web & Mobile design",
-            img: service1,
-            des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus laborum eos ut eveniet temporibus! Animi, cupiditate!",
-        },
-        {
-            name: "Graphic design",
-            img: service2,
-            des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus laborum eos ut eveniet temporibus! Animi, cupiditate!",
-        },
-        {
-            name: "Web development",
-            img: service3,
-            des: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus laborum eos ut eveniet temporibus! Animi, cupiditate!",
-        },
-    ]
+
+    const [services,setServices]=useState([])
+
+    useEffect(()=>{
+        fetch(`http://localhost:4000/getnewservices`)
+        .then(res=>res.json())
+        .then(data=>setServices(data))
+    },[])
 
     return (
         <section>

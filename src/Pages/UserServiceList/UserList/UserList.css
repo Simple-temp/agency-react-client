@@ -12,6 +12,7 @@
 .s-list-body
 {
     position: relative;
+    text-transform: capitalize;
 }
 .s-list-body span 
 {

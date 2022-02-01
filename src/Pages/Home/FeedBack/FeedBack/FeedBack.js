@@ -1,32 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./FeedBack.css"
-import customer1 from "../../../../img/customer-1.png"
-import customer2 from "../../../../img/customer-2.png"
-import customer3 from "../../../../img/customer-3.png"
 import FeedBackInfo from '../FeedBackInfo/FeedBackInfo';
 
 const FeedBack = () => {
 
-    const client = [
-        {
-            img : customer1,
-            name : "Nash Patrik",
-            title : "CEO, Manpol",
-            des : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nisi! Pariatur ullam et inventore.",
-        },
-        {
-            img : customer2,
-            name : "Nash Patrik",
-            title : "CEO, Manpol",
-            des : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nisi! Pariatur ullam et inventore.",
-        },
-        {
-            img : customer3,
-            name : "Nash Patrik",
-            title : "CEO, Manpol",
-            des : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nisi! Pariatur ullam et inventore.",
-        },
-    ]
+    const [client,setClient] = useState([])
+
+    useEffect(()=>{
+        fetch(`http://localhost:4000/getfeedback`)
+        .then( res => res.json())
+        .then( data => setClient(data))
+    },[])
 
     return (
         <section className='clients'>
@@ -43,3 +27,4 @@ const FeedBack = () => {
 };
 
 export default FeedBack;
+

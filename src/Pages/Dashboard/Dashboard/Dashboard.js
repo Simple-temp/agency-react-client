@@ -5,8 +5,8 @@ import UserSidebar from '../UserSidebar/UserSidebar/UserSidebar';
 const Dashboard = () => {
     return (
         <div>
-            <UserSidebar></UserSidebar>
-            {/* <AdminSideBar></AdminSideBar> */}
+            {/* <UserSidebar></UserSidebar> */}
+            <AdminSideBar></AdminSideBar>
         </div>
     );
 };

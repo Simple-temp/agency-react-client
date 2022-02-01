@@ -17,7 +17,7 @@ const Login = () => {
     let navigate = useNavigate();
     let location = useLocation();
 
-    let from = location.state?.from?.pathname || "/dashboard/usersidebar/order";
+    let from = location.state?.from?.pathname || "/";
 
     const googleSignIn = () => {
         const auth = getAuth();

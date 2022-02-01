@@ -27,7 +27,7 @@ const Navbar = () => {
                                 <a class="nav-link" href="/">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" className='btn btn-dark' to="/login">Login</Link>
+                                <Link class="nav-link" className='btn btn-dark' to="/dashboard/adminsidebar/servicelist">Login</Link>
                             </li>
                         </ul>
                     </div>

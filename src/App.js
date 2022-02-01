@@ -24,7 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/dashboard/usersidebar/order" element={ <UserSidebar />} />
+            <Route path="/dashboard/usersidebar/order" element={ <PrivateRoute> <UserSidebar /></PrivateRoute>} />
             <Route path="/dashboard/usersidebar/servicelist" element={<UserServiceList />} />
             <Route path="/dashboard/usersidebar/review" element={<UserReview />} />
             <Route path="/dashboard/adminsidebar/servicelist" element={<AdminSidebar />} />
