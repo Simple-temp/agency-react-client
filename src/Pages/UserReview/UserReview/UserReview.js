@@ -6,10 +6,10 @@ const UserReview = () => {
     return (
         <div className='container-fluid'>
             <div className="row">
-                <div className="col-lg-4">
+                <div className="col-lg-3">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="col-lg-8">
+                <div className="col-lg-9">
                    <ReviewList></ReviewList>
                 </div>
             </div>

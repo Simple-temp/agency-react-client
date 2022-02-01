@@ -1,0 +1,26 @@
+.s-u-list
+{
+    background-color: #fff;
+    padding:25px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    margin:20px;
+}
+.s-list-body
+{
+    position: relative;
+}
+.s-list-body span 
+{
+    position: absolute;
+    right:0;
+}
+.status-btn
+{
+    border:1px solid #009444;
+    background-color: #DEFFED;
+    color:green;
+}
