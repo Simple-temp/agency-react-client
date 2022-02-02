@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 import "./UserList.css"
 
 const UserList = () => {
 
+    const [loggedInuserInfo, setLoggedInuserInfo] = useContext(UserContext)
+
     const [order, setOrder] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:4000/getorderedservices`)
+        fetch(`http://localhost:4000/getorderedservices?email=`+loggedInuserInfo.email)
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [])

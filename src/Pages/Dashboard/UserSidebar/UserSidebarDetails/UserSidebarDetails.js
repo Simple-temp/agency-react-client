@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { UserContext } from '../../../../App';
 import "./UserSidebarDetails.css"
 
 const UserSidebarDetails = () => {
 
+    const [loggedInuserInfo, setLoggedInuserInfo] = useContext(UserContext)
     const [info,setInfo] = useState({});
     const [file,setFile] = useState(null)
 
@@ -17,7 +19,7 @@ const UserSidebarDetails = () => {
         setFile(newFiles);
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         const formData = new FormData()
         formData.append('file', file)
         formData.append('company', info.company)
@@ -33,10 +35,12 @@ const UserSidebarDetails = () => {
         .then(response => response.json())
         .then(data => {
           console.log(data)
+          alert("order placed")
         })
         .catch(error => {
           console.error(error)
         })
+        e.preventDefault()
     }
 
     return (

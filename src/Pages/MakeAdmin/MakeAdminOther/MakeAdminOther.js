@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./MakeAdminOther.css"
 
 const MakeAdminOther = () => {
+
+    const [admin,setAdmin] = useState({})
+
+    const handleAdmin =(e)=>{
+        const newAdmin = {...admin}
+        newAdmin[e.target.name] = e.target.value;
+        setAdmin(newAdmin)
+    }
+
+    const submitAdmin =()=>{
+
+        fetch(`http://localhost:4000/makenewadmin`,{
+            method: 'POST',
+            body: JSON.stringify(admin),
+            headers: {'Content-type': 'application/json'}
+    })
+        .then(res => res.json())
+        .then(data=>setAdmin(data))
+
+    }
+
     return (
         <div className='userOrder'>
             <div className="container">
@@ -15,9 +36,9 @@ const MakeAdminOther = () => {
             <div className="container pt-5 second">
                 <div className="row">
                     <div className="col-lg-7">
-                        <form action="">
+                        <form action="" onSubmit={submitAdmin}>
                             <h6>Email</h6>
-                            <input type="text" id="" placeholder='valid@gmail.com' className='w-75 order adm' />
+                            <input onBlur={handleAdmin} name="admin" type="email" placeholder='valid@gmail.com' className='w-75 order adm' />
                             <input type="submit" value="Submit" className='btn btn-success' />
                         </form>
                     </div>
