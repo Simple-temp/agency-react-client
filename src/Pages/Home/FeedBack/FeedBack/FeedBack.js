@@ -14,7 +14,7 @@ const FeedBack = () => {
 
     return (
         <section className='clients'>
-            <div className="container">
+            <div className="container inner-container">
                 <h4 className='h4 text-center pb-5'>Clients <span>Feedback</span></h4>
                 <div className="row">
                     {

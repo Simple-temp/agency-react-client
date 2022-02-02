@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
+                <div class="container inner-container">
                     <a class="navbar-brand" href="#"><img src={logo} style={{width:"180px"}} alt="" /></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@ const Navbar = () => {
                                 <a class="nav-link" href="/">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" className='btn btn-dark' to="/dashboard/adminsidebar/servicelist">Login</Link>
+                                <Link class="nav-link" className='btn btn-dark' to="/login">Login</Link>
                             </li>
                         </ul>
                     </div>

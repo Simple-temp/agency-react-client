@@ -37,14 +37,17 @@ const UserList = () => {
 
 function ShowUserList(props) {
 
-    const { img, des, subject } = props.showList
+    const { img, des, subject,image } = props.showList
 
     return (
         <>
             <div className="col-lg-5 col-md-5 col-12">
                 <div className="s-u-list">
                     <div className="s-list-body">
-                        <img src={`http://localhost:4000/${img}`} style={{ width: "100px" }} alt="" />
+                        {
+                            image ? <img src={`data:image/png;base64,${image.img}`} style={{ width: "100px" }} ></img>:
+                            <img src={`http://localhost:4000/${img}`} style={{ width: "100px" }} alt="" />
+                        }
                         <span className='btn status-btn'>Pending</span>
                     </div>
                     <div className="s-list-body">

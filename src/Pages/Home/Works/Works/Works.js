@@ -6,7 +6,9 @@ const Works = () => {
     return (
         <section className='works'>
             <h4 className='h4 text-white py-3 text-center'>Here are some of our <span>works</span></h4>
-            <WorksInfo></WorksInfo>
+            <div className="container inner-container">
+                <WorksInfo></WorksInfo>
+            </div>
         </section>
     );
 };

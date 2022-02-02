@@ -38,7 +38,7 @@ const MakeAdminOther = () => {
                     <div className="col-lg-7">
                         <form action="" onSubmit={submitAdmin}>
                             <h6>Email</h6>
-                            <input onBlur={handleAdmin} name="admin" type="email" placeholder='valid@gmail.com' className='w-75 order adm' />
+                            <input onBlur={handleAdmin} name="email" type="email" placeholder='valid@gmail.com' className='w-75 order adm' />
                             <input type="submit" value="Submit" className='btn btn-success' />
                         </form>
                     </div>

@@ -24,7 +24,7 @@ const Login = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 const {displayName,email,photoURL} = result.user;
-                const UserInfo = { name : displayName , email : email , img : photoURL}
+                const UserInfo = { name : displayName , email , img : photoURL}
                 setLoggedInuserInfo(UserInfo)
                 navigate(from, { replace: true });
             }).catch((error) => {

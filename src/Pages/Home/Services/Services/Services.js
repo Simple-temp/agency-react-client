@@ -15,7 +15,7 @@ const Services = () => {
 
     return (
         <section>
-            <div className='container mt-5 py-5'>
+            <div className='container mt-5 py-5 inner-container'>
                 <h4 className='h4 mb-5 text-center'>Provide awesome <span>services</span></h4>
                 <div className="row">
                     {

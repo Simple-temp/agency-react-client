@@ -4,7 +4,7 @@ import "./Main.css"
 
 const Main = () => {
     return (
-        <div className='container mt-4'>
+        <div className='container mt-4 inner-container'>
             <div className="row">
                 <div className="col-lg-5 col-md-6 col-sm-12 d-flex align-items-center">
                     <div className="main-box">
