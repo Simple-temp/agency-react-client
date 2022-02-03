@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import loading from "../../../img/loading.gif"
 
 const UserMassegesInfo = () => {
 
@@ -22,7 +23,10 @@ const UserMassegesInfo = () => {
             </div>
             <div className="container pt-5 second">
                 <div className="row">
-                    <ShowMassege getmassege={getmassege}></ShowMassege>
+                    {
+                        getmassege.length === 0 ? <img src={loading} style={{width:"500px"}} className='mx-auto' alt="" /> :
+                        <ShowMassege getmassege={getmassege}></ShowMassege>
+                    }
                 </div>
             </div>
         </div>

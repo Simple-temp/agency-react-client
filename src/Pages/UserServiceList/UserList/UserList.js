@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import "./UserList.css"
+import loading from "../../../img/loading.gif"
 
 const UserList = () => {
 
@@ -27,6 +28,7 @@ const UserList = () => {
             <div className="container pt-5 second">
                 <div className="row">
                     {
+                        order.length === 0 ? <img src={loading} style={{width:"500px"}} className='mx-auto' alt="" /> :
                         order.map(showOrder => <ShowUserList showList={showOrder} key={showOrder._id}></ShowUserList>)
                     }
                 </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./Services.css"
 import ServicesInfo from '../ServicesInfo/ServicesInfo';
+import loading from "../../../../img/loading.gif"
 
 const Services = () => {
 
@@ -19,6 +20,7 @@ const Services = () => {
                 <h4 className='h4 mb-5 text-center'>Provide awesome <span>services</span></h4>
                 <div className="row">
                     {
+                        services.length === 0 ? <img src={loading} style={{width:"500px"}} className='mx-auto' alt="" /> :
                         services.map(service => <ServicesInfo service={service}></ServicesInfo>)
                     }
                 </div>
