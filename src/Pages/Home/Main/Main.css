@@ -1,0 +1,18 @@
+@media (max-width:768px) {
+    .main-box p
+    {
+        width:100% !important;
+    }
+}
+p
+{
+    text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    text-transform: capitalize;
+}

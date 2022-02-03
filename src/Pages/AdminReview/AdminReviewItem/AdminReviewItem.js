@@ -31,6 +31,7 @@ const AdminReviewItem = () => {
             .then(response => response.json())
             .then(data => {
                 console.log(data)
+                alert("added services")
             })
             .catch(error => {
                 console.error(error)

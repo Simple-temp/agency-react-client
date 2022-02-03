@@ -10,7 +10,7 @@ const WorksInfo = () => {
     return (
         <div>
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
+                <div class="carousel-indicators con">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -20,40 +20,56 @@ const WorksInfo = () => {
                     <div class="carousel-item active" data-bs-interval="1000">
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12">
-                                <img src={carousel1} style={{ width: "100%", height: "400px" }} alt="img" />
+                                <div className="img-box">
+                                    <img src={carousel1} style={{ width: "100%", height: "350px" }} alt="img" />
+                                </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12">
-                                <img src={carousel2} style={{ width: "100%", height: "400px" }} alt="img" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="1000">
-                        <div className="row">
-                            <div className="col-lg-6 col-md-6 col-sm-12">
-                                <img src={carousel2} style={{ width: "100%", height: "400px" }} alt="img" />
-                            </div>
-                            <div className="col-lg-6 col-md-6 col-sm-12">
-                                <img src={carousel3} style={{ width: "100%", height: "400px" }} alt="img" />
+                                <div className="img-box">
+                                    <img src={carousel2} style={{ width: "100%", height: "350px" }} alt="img" />
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="1000">
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12">
-                                <img src={carousel3} style={{ width: "100%", height: "400px" }} alt="img" />
+                                <div className="img-box">
+                                    <img src={carousel2} style={{ width: "100%", height: "350px" }} alt="img" />
+                                </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12">
-                                <img src={carousel4} style={{ width: "100%", height: "400px" }} alt="img" />
+                                <div className="img-box">
+                                    <img src={carousel3} style={{ width: "100%", height: "350px" }} alt="img" />
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="1000">
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12">
-                                <img src={carousel4} style={{ width: "100%", height: "400px" }} alt="img" />
+                                <div className="img-box">
+                                    <img src={carousel3} style={{ width: "100%", height: "350px" }} alt="img" />
+                                </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12">
-                                <img src={carousel5} style={{ width: "100%", height: "400px" }} alt="img" />
+                                <div className="img-box">
+                                    <img src={carousel4} style={{ width: "100%", height: "350px" }} alt="img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1000">
+                        <div className="row">
+                            <div className="col-lg-6 col-md-6 col-sm-12">
+                                <div className="img-box">
+                                    <img src={carousel4} style={{ width: "100%", height: "350px" }} alt="img" />
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12">
+                                <div className="img-box">
+                                    <img src={carousel5} style={{ width: "100%", height: "350px" }} alt="img" />
+                                </div>
                             </div>
                         </div>
                     </div>

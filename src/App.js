@@ -7,6 +7,7 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
 import MakeAdmin from './Pages/MakeAdmin/MakeAdmin/MakeAdmin';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import UserMasseges from './Pages/UserMasseges/UserMasseges/UserMasseges';
 import UserReview from './Pages/UserReview/UserReview/UserReview';
 import UserServiceList from './Pages/UserServiceList/UserServiceList/UserServiceList';
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/dashboard/adminsidebar/servicelist" element={<AdminSidebar />} />
             <Route path="/dashboard/adminsidebar/addservice" element={<AdminReview />} />
             <Route path="/dashboard/adminsidebar/makeadmin" element={<MakeAdmin />} />
+            <Route path="/dashboard/adminsidebar/massegeinfo" element={<UserMasseges />} />
           </Routes>
         </Router>
       </UserContext.Provider>

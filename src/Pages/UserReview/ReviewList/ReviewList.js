@@ -31,6 +31,7 @@ const ReviewList = () => {
             .then(response => response.json())
             .then(data => {
                 console.log(data)
+                alert("review added")
             })
             .catch(error => {
                 console.error(error)
