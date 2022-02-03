@@ -7,7 +7,7 @@ const FeedBack = () => {
     const [client,setClient] = useState([])
 
     useEffect(()=>{
-        fetch(`http://localhost:4000/getfeedback`)
+        fetch(`https://agency-serve-node.herokuapp.com/getfeedback`)
         .then( res => res.json())
         .then( data => setClient(data))
     },[])

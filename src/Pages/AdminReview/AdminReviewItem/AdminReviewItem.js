@@ -24,7 +24,7 @@ const AdminReviewItem = () => {
         formData.append('title', services.title)
         formData.append('des', services.des)
 
-        fetch('http://localhost:4000/addnewservices', {
+        fetch('https://agency-serve-node.herokuapp.com/addnewservices', {
             method: 'POST',
             body: formData
         })

@@ -13,7 +13,7 @@ const Footer = () => {
 
     const handleMassege = (e) => {
 
-        fetch('http://localhost:4000/postmassege', {
+        fetch('https://agency-serve-node.herokuapp.com/postmassege', {
             method: 'POST',
             body: JSON.stringify(massege),
             headers: {'Content-type': 'application/json'}
@@ -23,7 +23,7 @@ const Footer = () => {
                 console.log(data)
                 alert("Massege sent successfully")
             });
-            
+
         e.preventDefault()
     }
 

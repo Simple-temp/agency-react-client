@@ -5,7 +5,7 @@ const UserMassegesInfo = () => {
     const [getmassege, setgetmassege] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:4000/showusermassege`)
+        fetch(`https://agency-serve-node.herokuapp.com/showusermassege`)
             .then(res => res.json())
             .then(data => setgetmassege(data))
     }, [])

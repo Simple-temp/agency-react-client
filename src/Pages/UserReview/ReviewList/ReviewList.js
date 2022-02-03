@@ -24,7 +24,7 @@ const ReviewList = () => {
         formData.append('companyName', reviewedInfo.companyName)
         formData.append('des', reviewedInfo.des)
 
-        fetch('http://localhost:4000/userreview', {
+        fetch('https://agency-serve-node.herokuapp.com/userreview', {
             method: 'POST',
             body: formData
         })
