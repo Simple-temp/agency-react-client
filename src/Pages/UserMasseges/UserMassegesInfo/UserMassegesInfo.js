@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 import loading from "../../../img/loading.gif"
 
 const UserMassegesInfo = () => {
 
+    const [loggedInuserInfo, setLoggedInuserInfo] = useContext(UserContext)
     const [getmassege, setgetmassege] = useState([])
 
     useEffect(() => {
@@ -17,7 +19,7 @@ const UserMassegesInfo = () => {
                 <div className="row">
                     <div className="order-head d-flex justify-content-between">
                         <h4>Massege</h4>
-                        <p>Username</p>
+                        <b>{loggedInuserInfo.name}</b>
                     </div>
                 </div>
             </div>
@@ -40,18 +42,16 @@ function ShowMassege({getmassege}) {
             <table className='table table-borderless'>
                 <thead>
                     <tr>
-                        <th scope='col'>Name</th>
-                        <th scope='col'>Email</th>
-                        <th scope='col'>Message</th>
+                        <th>Name</th>
+                        <th>Message</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         getmassege.map((getmassege, index) =>
                             <tr>
-                                <td>{getmassege.name}</td>
-                                <td>{getmassege.email}</td>
-                                <td>{getmassege.message}</td>
+                                <td data-label="Name">{getmassege.name}</td>
+                                <td data-label="Massege">{getmassege.message}</td>
                             </tr>
                         )
 

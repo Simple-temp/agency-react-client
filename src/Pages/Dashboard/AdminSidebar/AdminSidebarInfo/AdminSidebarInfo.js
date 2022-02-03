@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "./AdminSidebarInfo.css"
 import loading from "../../../../img/loading.gif"
+import { UserContext } from '../../../../App';
 
 const AdminSidebarInfo = () => {
+
+    const [loggedInuserInfo, setLoggedInuserInfo] = useContext(UserContext)
 
     const [alldata,setAlldata] = useState([])
 
@@ -18,7 +21,7 @@ const AdminSidebarInfo = () => {
                 <div className="row">
                     <div className="order-head d-flex justify-content-between">
                         <h4>All Service</h4>
-                        <p>Username</p>
+                        <b>{loggedInuserInfo.name}</b>
                     </div>
                 </div>
             </div>
@@ -39,22 +42,22 @@ function ShowTheData ({alldata}){
             <table className='table table-borderless'>
                 <thead>
                     <tr>
-                        <th scope='col'>Name</th>
-                        <th scope='col'>Email Id</th>
-                        <th scope='col'>Service</th>
-                        <th scope='col'>Project Details</th>
-                        <th scope='col'>Status</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Service</th>
+                        <th>Details</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         alldata.map((alldata, index) =>
                             <tr>
-                                <td>{alldata.company}</td>
-                                <td>{alldata.email}</td>
-                                <td>{alldata.subject}</td>
-                                <td>{alldata.des}</td>
-                                <td><button className='btn text-danger'>Pending</button></td>
+                                <td data-label="Name">{alldata.company}</td>
+                                <td data-label="Email">{alldata.email}</td>
+                                <td data-label="Service">{alldata.subject}</td>
+                                <td data-label="Details">{alldata.des}</td>
+                                <td data-label="Status"><button className='btn text-danger'>Pending</button></td>
                             </tr>
                         )
 

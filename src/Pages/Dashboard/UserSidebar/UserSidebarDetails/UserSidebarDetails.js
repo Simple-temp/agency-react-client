@@ -49,7 +49,7 @@ const UserSidebarDetails = () => {
                 <div className="row">
                     <div className="order-head d-flex justify-content-between">
                         <h4>Order</h4>
-                        <p>Username</p>
+                        <b>{loggedInuserInfo.name}</b>
                     </div>
                 </div>
             </div>

@@ -1,16 +1,18 @@
-.userOrder p
+.userOrder b
 {
     padding-right:50px;
 }
 .order-head
 {
     padding-top:40px;
+    padding-left:30px;
 }
 .second
 {
     background-color: #F4F7FC;
     padding-left:30px;
-    height:100vh;
+    padding-right:30px;
+    padding-bottom:30px;
 }
 .order
 {

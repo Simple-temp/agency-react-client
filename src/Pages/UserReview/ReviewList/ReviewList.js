@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { UserContext } from '../../../App';
 
 const ReviewList = () => {
+
+    const [loggedInuserInfo, setLoggedInuserInfo] = useContext(UserContext)
 
     const [reviewedInfo, setReviewInfo] = useState({})
     const [reviewedFile, setReviewedFile] = useState(null)
@@ -44,7 +47,7 @@ const ReviewList = () => {
                 <div className="row">
                     <div className="order-head d-flex justify-content-between">
                         <h4>Review</h4>
-                        <p>Username</p>
+                        <b>{loggedInuserInfo.name}</b>
                     </div>
                 </div>
             </div>

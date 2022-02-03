@@ -21,7 +21,7 @@ const UserList = () => {
                 <div className="row">
                     <div className="order-head d-flex justify-content-between">
                         <h4>Service</h4>
-                        <p>Username</p>
+                        <b>{loggedInuserInfo.name}</b>
                     </div>
                 </div>
             </div>
