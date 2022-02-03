@@ -58,7 +58,7 @@ const UserSidebarDetails = () => {
                     <div className="col-lg-6">
                         <form action="" onSubmit={handleSubmit}>
                             <input onBlur={handleBlur} required name="company" type="text" placeholder='Your name/Company name' className='w-100 order' />
-                            <input onBlur={handleBlur} required name="email" type="email" placeholder='Your email' className='w-100 order' />
+                            <input onBlur={handleBlur} required name="email" type="email" placeholder='Your exact email which is login' className='w-100 order' />
                             <input onBlur={handleBlur} required name="subject" type="text" placeholder='Subject name' className='w-100 order' />
                             <textarea onBlur={handleBlur} required name="des" cols="30" rows="5" className='w-100 mt-3 order' placeholder='Project Details'></textarea>
                             <div className="filebox">
