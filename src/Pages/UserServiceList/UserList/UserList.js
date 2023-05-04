@@ -10,7 +10,7 @@ const UserList = () => {
     const [order, setOrder] = useState([])
 
     useEffect(() => {
-        fetch(`https://agency-serve-node.herokuapp.com/getorderedservices?email=`+loggedInuserInfo.email)
+        fetch(`https://agency-wmb7.onrender.com/getorderedservices?email=`+loggedInuserInfo.email)
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [])
@@ -48,7 +48,7 @@ function ShowUserList(props) {
                     <div className="s-list-body">
                         {
                             image ? <img src={`data:image/png;base64,${image.img}`} style={{ width: "100px" }} ></img>:
-                            <img src={`https://agency-serve-node.herokuapp.com/${img}`} style={{ width: "100px" }} alt="" />
+                            <img src={`https://agency-wmb7.onrender.com/${img}`} style={{ width: "100px" }} alt="" />
                         }
                         <span className='btn status-btn'>Pending</span>
                     </div>

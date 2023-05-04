@@ -8,7 +8,7 @@ const UserMassegesInfo = () => {
     const [getmassege, setgetmassege] = useState([])
 
     useEffect(() => {
-        fetch(`https://agency-serve-node.herokuapp.com/showusermassege`)
+        fetch(`https://agency-wmb7.onrender.com/showusermassege`)
             .then(res => res.json())
             .then(data => setgetmassege(data))
     }, [])

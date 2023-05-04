@@ -28,7 +28,7 @@ const UserSidebarDetails = () => {
         formData.append('des', info.des)
         formData.append('price', info.price)
       
-        fetch('https://agency-serve-node.herokuapp.com/postuserorder', {
+        fetch('https://agency-wmb7.onrender.com/postuserorder', {
           method: 'POST',
           body: formData
         })

@@ -9,7 +9,7 @@ const FeedBackInfo = ({ client }) => {
                 <div className="client-head d-flex align-items-center">
                     {
                         image ? <img src={`data:image/png;base64,${image.img}`} style={{ width: "60px", height: "auto", borderRadius: "50px" }} ></img> :
-                        <img src={`https://agency-serve-node.herokuapp.com/${img}`} style={{ width: "60px", height: "auto", borderRadius: "50px" }} alt="" />
+                        <img src={`https://agency-wmb7.onrender.com/${img}`} style={{ width: "60px", height: "auto", borderRadius: "50px" }} alt="" />
                     }
                     <div className="c-h-title">
                         <h6>{title}</h6>

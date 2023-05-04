@@ -8,7 +8,7 @@ const FeedBack = () => {
     const [client,setClient] = useState([])
 
     useEffect(()=>{
-        fetch(`https://agency-serve-node.herokuapp.com/getfeedback`)
+        fetch(`https://agency-wmb7.onrender.com/getfeedback`)
         .then( res => res.json())
         .then( data => setClient(data))
     },[])

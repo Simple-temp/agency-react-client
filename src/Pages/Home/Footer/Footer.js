@@ -13,7 +13,7 @@ const Footer = () => {
 
     const handleMassege = (e) => {
 
-        fetch('https://agency-serve-node.herokuapp.com/postmassege', {
+        fetch('https://agency-wmb7.onrender.com/postmassege', {
             method: 'POST',
             body: JSON.stringify(massege),
             headers: {'Content-type': 'application/json'}

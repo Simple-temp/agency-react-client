@@ -10,7 +10,7 @@ const AdminSidebarInfo = () => {
     const [alldata,setAlldata] = useState([])
 
     useEffect(()=>{
-        fetch(`https://agency-serve-node.herokuapp.com/getalldata`)
+        fetch(`https://agency-wmb7.onrender.com/getalldata`)
         .then(res => res.json())
         .then(data=>setAlldata(data))
     },[])

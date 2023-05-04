@@ -15,7 +15,7 @@ const MakeAdminOther = () => {
 
     const submitAdmin =()=>{
 
-        fetch(`https://agency-serve-node.herokuapp.com/makenewadmin`,{
+        fetch(`https://agency-wmb7.onrender.com/makenewadmin`,{
             method: 'POST',
             body: JSON.stringify(admin),
             headers: {'Content-type': 'application/json'}
